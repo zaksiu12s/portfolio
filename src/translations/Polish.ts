@@ -53,4 +53,11 @@ export default {
 
     "An error occurred. Please try again.": "Wystąpił błąd. Spróbuj ponownie.",
     "Message has been sent! Thank you for contacting me.": "Wiadomość została wysłana! Dziękujemy za kontakt.",
+    "I build websites.": "Tworzę strony internetowe.",
+    "I build apps.": "Tworzę aplikacje.",
+    "I create experiences.": "Tworzę wyjątkowe projekty.",
+    "websites.": "strony internetowe.",
+    "apps.": "aplikacje.",
+    "experiences.": "doświadczenia.",
+    "I build": "Tworzę"
 }
