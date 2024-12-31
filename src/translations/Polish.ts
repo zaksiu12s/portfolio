@@ -65,5 +65,7 @@ export default {
     "All Rights Reserved": "Wszystkie prawa zastrzeżone",
     "Stay in touch": "Pozostańmy w kontakcie",
     "Sign up": "Zapisz się",
-    "Max": "Maksymilian"
+    "Max": "Maksymilian",
+    "Go home": "Powrót",
+    "Oops! This page does not exist.": "Kurczaczki pieczone! Ta strona nie istnieje."
 }

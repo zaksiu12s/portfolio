@@ -15,7 +15,7 @@ export default function Navbar(props: NavbarProps) {
     return (
         <nav className={" animate-fade fixed w-full text-neutral-700 dark:text-white font-Poppins py-10 px-8 sm:px-16 top-0 left-0 z-40 transition-all " + (props.isScrolled && " bg-neutral-300 dark:bg-neutral-900 py-4 sm:px-20 ")}>
             <div className="flex justify-between items-center container mx-auto gap-10">
-                <NavbarLogo />
+                <NavbarLogo goHome={!props.isScrolled} />
 
                 {
                     /* desktop */
