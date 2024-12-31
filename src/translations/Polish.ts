@@ -59,5 +59,11 @@ export default {
     "websites.": "strony internetowe.",
     "apps.": "aplikacje.",
     "experiences.": "unikalne projekty.",
-    "I build": "Tworzę"
+    "I build": "Tworzę",
+    "Privacy Policy": "Polityka Prywatności",
+    "Terms of Service": "Warunki Usługi",
+    "All Rights Reserved": "Wszystkie prawa zastrzeżone",
+    "Stay in touch": "Pozostańmy w kontakcie",
+    "Sign up": "Zapisz się",
+    "Max": "Maksymilian"
 }
