@@ -32,7 +32,7 @@ export default function NotFound() {
     }, []);
 
     return <>
-        <Navbar isScrolled={isScrolled} isMenuVisible={isMenuVisible} handleMenuClick={handleMenuClick} />
+        <Navbar isScrolled={isScrolled} isMenuVisible={isMenuVisible} handleMenuClick={handleMenuClick} showMenuItems={false} />
         <div className="absolute inset-0 flex flex-col justify-center items-center">
             <h1 className="text-9xl font-Montserrat font-bold text-blue-500 dark:text-orange-600 animate-fade">404</h1>
             <p className="text-4xl text-white font-Roboto animate-fade animate-delay-300 text-center px-16 break-words">{t("Oops! This page does not exist.")}</p>

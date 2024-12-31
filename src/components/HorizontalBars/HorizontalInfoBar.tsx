@@ -4,7 +4,7 @@ import handleScrollToTop from "../../helpers/handleScrollToTop";
 export default function HorizontalInfoBar(props: {
     isScrolled: boolean,
 }) {
-    return (<div className="fixed right-0 bottom-0 px-2">
+    return (<div className="fixed right-0 bottom-0 px-2 z-30">
         <div className="flex items-end">
             <div className="text-gray-50 flex flex-col items-center justify-end text-sm  font-Poppins gap-5">
                 <h1 className="[writing-mode:vertical-rl] hover:text-white hidden sm:block">
