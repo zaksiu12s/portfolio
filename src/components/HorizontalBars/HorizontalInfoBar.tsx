@@ -8,7 +8,7 @@ export default function HorizontalInfoBar(props: {
         <div className="flex items-end">
             <div className="text-gray-50 flex flex-col items-center justify-end text-sm  font-Poppins gap-5">
                 <h1 className="[writing-mode:vertical-rl] hover:text-white hidden sm:block">
-                    zaksiu12s.ubiad.pl
+                    {window.location.href.replace("http", "").replace("https", "").replace("://", "")}
                 </h1>
                 <div className={" w-8 h-8 border-2 p-0.5 mb-2 text-gray-50 cursor-pointer " + (!props.isScrolled && " hidden ")} onClick={handleScrollToTop}>
                     <div className="hover:scale-[120%] transition-all">

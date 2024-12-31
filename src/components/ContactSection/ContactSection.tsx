@@ -69,8 +69,7 @@ export default function ContactSection() {
                 secondaryText={t("I can make these for you:")}
             />
             <form onSubmit={sendEmail} className="p-8 sm:pl-20 max-w-[900px]">
-                <label htmlFor="userLang" className="hidden"></label>
-                <input title="User language (auto)" className="hidden" name="userLang" value={i18n.language} />
+                <input title="User language (auto)" readOnly className="hidden" name="userLang" value={i18n.language} />
 
                 <div className="mb-4">
                     <label htmlFor="name" className="block text-neutral-700 dark:text-neutral-400 font-Poppins text-xl font-bold">{t("Name")}</label>
