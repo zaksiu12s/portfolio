@@ -6,7 +6,7 @@ import TypewriterComponent from "typewriter-effect";
 export default function HeroSection() {
     const { t } = useTranslation();
 
-    return (<section id="section1" className="flex items-center min-h-[50vh] pt-40 p-12 sm:p-20 sm:pt-48">
+    return (<section id="section1" className="flex items-center min-h-[75vh] pt-40 p-12 sm:p-20 sm:pt-48">
         <div className="relative container mx-auto">
             <div className="text-gray-50">
                 <p className="text-2xl text-blue-500 dark:text-orange-600 font-roboto animate-fade">
@@ -15,9 +15,9 @@ export default function HeroSection() {
                 <h1 className="animate-ty text-7xl sm:text-8xl font-bold font-Montserrat animate-fade">
                     Max Zając.
                 </h1>
-                <h2 className="flex flex-col sm:block break-words pt-2 text-5xl sm:text-6xl font-Poppins text-gray-600 dark:text-gray-400 animate-fade">
+                <h2 className="flex flex-col lg:block break-words pt-2 text-5xl sm:text-6xl font-Poppins text-gray-600 dark:text-gray-400 animate-fade">
                     {t("I build")}&nbsp;
-                    <span className="font-bold">
+                    <span className="font-bold h-[150px] sm:h-[100px]">
                         <TypewriterComponent
                             component={"span"}
                             options={{
