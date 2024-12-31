@@ -15,7 +15,7 @@ export default function HeroSection() {
                 <h1 className="animate-ty text-7xl sm:text-8xl font-bold font-Montserrat animate-fade">
                     Max Zając.
                 </h1>
-                <h2 className="pt-2 text-5xl sm:text-6xl font-Poppins text-gray-600 dark:text-gray-400 animate-fade">
+                <h2 className="flex flex-col sm:block break-words pt-2 text-5xl sm:text-6xl font-Poppins text-gray-600 dark:text-gray-400 animate-fade">
                     {t("I build")}&nbsp;
                     <span className="font-bold">
                         <TypewriterComponent
