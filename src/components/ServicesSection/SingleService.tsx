@@ -12,7 +12,7 @@ export function SingleService(props: { mainText: string, secondaryText: string, 
             <h1 className=" break-words hyphens-auto text-neutral-600 font-Montserrat font-bold text-4xl sm:text-5xl">
                 {props.mainText}
             </h1>
-            <p className="py-5 text-neutral-600">
+            <p className="py-5 text-neutral-600 break-words">
                 {props.secondaryText}
             </p>
             <h3 className="pb-2 text-lg font-Poppins font-bold text-gray-200">

@@ -58,6 +58,6 @@ export default {
     "I create experiences.": "Tworzę wyjątkowe projekty.",
     "websites.": "strony internetowe.",
     "apps.": "aplikacje.",
-    "experiences.": "doświadczenia.",
+    "experiences.": "unikalne projekty.",
     "I build": "Tworzę"
 }

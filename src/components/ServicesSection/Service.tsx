@@ -4,5 +4,6 @@ export interface Service {
     icons: {
         src: string;
         alt: string;
+        href: string;
     }[];
 }

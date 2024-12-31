@@ -1,8 +1,6 @@
-import { useState } from "react";
 import SectionHeaderText from "../UI/SectionHeaderText";
 import TechnologyIcon from "../UI/TechnologyIcon";
 import { SingleService } from "./SingleService";
-import { Service } from "./Service";
 import services from "../../assets/data/services";
 import { HeroSectionCTA } from "../UI/HeroSectionCTA";
 import { useTranslation } from "react-i18next";
@@ -10,7 +8,7 @@ import { useTranslation } from "react-i18next";
 export default function ServicesSection() {
     const { t } = useTranslation();
 
-    const [servicesArray] = useState<Service[]>(services);
+    const servicesArray = services;
 
     return (<section id="section3" className="px-12 py-32 overflow-x-hidden">
         <div className="container mx-auto">
@@ -31,12 +29,13 @@ export default function ServicesSection() {
                         align={index % 2 == 0 ? "left" : "right"}
                         key={index}
                     >
-                        {service.icons.map((icon, index) =>
+                        {service.icons.map((icon) =>
                             <TechnologyIcon
                                 src={icon.src}
                                 alt={icon.alt}
-                                key={index}
-                            />
+                                key={icon.src}
+                                href={icon.href}
+                                aria-label={icon.alt} />
                         )}
                     </SingleService>
                 }
