@@ -5,13 +5,14 @@ import Telescope from "../../assets/icons/Telescope";
 import WiFi from "../../assets/icons/WiFi";
 import SectionHeaderText from "../UI/SectionHeaderText";
 import { AboutMeSectionSkill } from "./AboutMeSectionSkill";
+import Container from "../Container";
 
 export default function AboutMeSection() {
     const { t } = useTranslation();
 
     return (
         <section id="section2" className="px-12 py-32 overflow-x-hidden">
-            <div className="container mx-auto">
+            <Container>
                 <SectionHeaderText
                     mainText={t("About Me")}
                     secondaryText={t("What do I do and what are my hobbies:")}
@@ -50,6 +51,6 @@ export default function AboutMeSection() {
                         </div>
                     </AboutMeSectionSkill>
                 </div>
-            </div>
+            </Container>
         </section>);
 }

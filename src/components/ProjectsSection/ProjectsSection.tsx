@@ -5,6 +5,7 @@ import { ProjectCard } from "./ProjectCard";
 import { Project } from "./Project";
 import projects from "../../assets/data/projects";
 import { useTranslation } from "react-i18next";
+import Container from "../Container";
 
 export default function ProjectsSection() {
     const [projectsArray] = useState<Project[]>([...projects, ...projects, ...projects, ...projects, ...projects]);
@@ -12,7 +13,7 @@ export default function ProjectsSection() {
 
     return (
         <>{(projectsArray.length > 0) && <section id="section4" className="px-12 overflow-x-hidden py-32" >
-            <div className="container mx-auto pb-10">
+            <Container>
                 <SectionHeaderText
                     mainText={t("Projects")}
                     secondaryText={t("Some projects I have done before:")}
@@ -34,11 +35,10 @@ export default function ProjectsSection() {
                                     src={icon.src}
                                     alt={icon.alt}
                                     key={index}
+                                    href={""}
                                 />)}
                         </ProjectCard>)}
                 </div>
-            </div>
-
-
+            </Container>
         </section >}</>);
 }
