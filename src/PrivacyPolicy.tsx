@@ -33,7 +33,7 @@ export default function PrivacyPolicy() {
 
     return (
         <>
-            <Navbar isScrolled={isScrolled} isMenuVisible={isMenuVisible} handleMenuClick={handleMenuClick} showMenuItems={false} />
+            <Navbar loadMainPage={true} isScrolled={isScrolled} isMenuVisible={isMenuVisible} handleMenuClick={handleMenuClick} showMenuItems={false} />
             <HorizontalInfoBar isScrolled={isScrolled} />
             <HorizontalLinksBar />
             <div className="px-10 text-white pt-32 max-w-max mx-auto">

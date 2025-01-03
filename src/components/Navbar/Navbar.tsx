@@ -12,15 +12,16 @@ import { useTranslation } from "react-i18next";
 export default function Navbar({ isScrolled,
     isMenuVisible,
     handleMenuClick,
-    showMenuItems = true }: NavbarProps) {
+    showMenuItems = true,
+    loadMainPage = false }: NavbarProps) {
     const { t } = useTranslation();
     const { theme, setTheme } = useTheme();
 
     return (
-        <nav className={" animate-fade fixed w-full text-neutral-700 dark:text-white font-Poppins py-10 px-8 sm:px-16 top-0 left-0 z-40 transition-all " + (isScrolled && " bg-neutral-300 dark:bg-neutral-900 py-4 sm:px-20 ")}>
+        <nav className={" animate-fade fixed w-full text-neutral-700 dark:text-white font-Poppins py-4 sm:py-10 px-8 sm:px-16 top-0 left-0 z-40 transition-all " + (isScrolled && " bg-neutral-300 dark:bg-neutral-900 sm:py-4 sm:px-20 ")}>
             <Container>
                 <div className="flex justify-between items-center gap-10">
-                    <NavbarLogo goHome={!isScrolled} />
+                    <NavbarLogo goHome={loadMainPage || !isScrolled} />
 
                     {
                         /* desktop */

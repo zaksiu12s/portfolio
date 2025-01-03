@@ -3,4 +3,5 @@ export interface NavbarProps {
     isMenuVisible: boolean;
     handleMenuClick: () => void;
     showMenuItems?: boolean
+    loadMainPage?: boolean;
 }
