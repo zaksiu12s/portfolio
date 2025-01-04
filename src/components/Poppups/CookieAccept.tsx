@@ -1,9 +1,11 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { HeroSectionCTA } from "../UI/HeroSectionCTA";
+import { useTranslation } from "react-i18next";
 
 export default function CookieAccept(props: {
     show?: boolean, hide?: Dispatch<SetStateAction<boolean>>
 }) {
+    const { t } = useTranslation();
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -34,14 +36,13 @@ export default function CookieAccept(props: {
 
     return (
         <>
-            {(isVisible || props.show) && <div className={"animate-slideInFromBottom fixed z-50 bottom-0 sm:bottom-12 sm:right-12 p-4 bg-neutral-950 text-white shadow-lg max-w-[400px] shadow-neutral-950 " + (isVisible && " animate-delay-1000 ")}>
-                <h1 className="text-xl font-bold font-Montserrat mb-2">I value your privacy</h1>
-                <p className="mb-4 text-sm font-Roboto">
-                    We use cookies to ensure you get the best experience on our website. By
-                    accepting, you agree to our use of cookies.{" "}
+            {(isVisible || props.show) && <div className={"animate-slideInFromBottom fixed z-50 bottom-0 sm:bottom-12 sm:right-12 p-4 bg-neutral-950 text-white shadow-lg max-w-[450px] shadow-neutral-950 " + (isVisible && " animate-delay-1000 ")}>
+                <h1 className="text-xl font-bold font-Montserrat mb-2">{t("I value your privacy")}</h1>
+                <p className="mb-4 text-sm font-Roboto text-neutral-400">
+                    {t("We use cookies to ensure you get the best experience on our website. By accepting, you agree to our use of cookies.")}{" "}
                     <span className="cursor-pointer decoration-inherit underline">
                         <a href="/privacy-policy">
-                            Privacy Policy
+                            {t("Privacy Policy")}
                         </a>
                     </span>
                 </p>
@@ -50,7 +51,7 @@ export default function CookieAccept(props: {
                     <HeroSectionCTA text="Reject All" onClick={handleRejectCookies} />
                     <HeroSectionCTA text="Accept Cookies" bgFill={true} onClick={handleAcceptCookies} />
                 </div>
-            </div>}
+            </div >}
         </>
     )
 }

@@ -125,8 +125,8 @@ export default function PrivacyPolicy() {
                     </p>
                 </section>
 
-                <p className="text-center pb-12 text-neutral-400 underline" onClick={() => { setIsManageCookiesVisible(true) }}>
-                    Manage your cookies.
+                <p className="text-center pb-12 text-neutral-400 underline cursor-pointer" onClick={() => { setIsManageCookiesVisible(true) }}>
+                    {t("Manage your cookies.")}
                 </p>
             </div>
 

@@ -149,5 +149,10 @@ export default {
     "Sign up": "Zapisz się",
     "Max": "Maksymilian",
     "Go home": "Powrót",
-    "Oops! This page does not exist.": "Kurczaczki pieczone! Ta strona nie istnieje."
+    "Oops! This page does not exist.": "Kurczaczki pieczone! Ta strona nie istnieje.",
+    "We use cookies to ensure you get the best experience on our website. By accepting, you agree to our use of cookies.": "Używamy ciasteczek, aby zapewnić Ci najlepsze doświadczenia na naszej stronie. Akceptując, zgadzasz się na naszą politykę dotyczącą ciasteczek.",
+    "Reject All": "Usuń",
+    "Accept Cookies": "Zaakceptuj wszystkie",
+    "Manage your cookies.": "Edytuj swoje ciasteczka.",
+    "I value your privacy": "Szanuję Twoją prywatność"
 }
