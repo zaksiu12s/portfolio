@@ -10,6 +10,8 @@ import Footer from "./components/Footer/Footer";
 import ProgressBar from "./components/ProgressBar/ProgressBar";
 import ParticleBackground from "./components/Particles/ParticleBackground";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
+import CookieAccept from "./components/Poppups/CookieAccept";
 
 export default function Home() {
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -35,7 +37,11 @@ export default function Home() {
         };
     }, []);
 
-    return <>{/* navigation */}
+    return <>
+        <Helmet>
+            <title>{isScrolled ? "zaaksiu." : "zaaksiu"}</title>
+        </Helmet>
+
         <ParticleBackground />
 
         <Navbar
@@ -44,27 +50,18 @@ export default function Home() {
             handleMenuClick={handleMenuClick}
         />
 
-        {/* hero section */}
         <HeroSection />
-
-        {/* about me section */}
         <AboutMeSection />
-
-        {/* services */}
         <ServicesSection />
-
-        {/* projects */}
         <ProjectsSection />
-
-        {/* contact form */}
         <ContactSection />
-
-        {/* footer */}
         <Footer />
 
         {/* horizontal bars */}
         <HorizontalLinksBar />
         <HorizontalInfoBar isScrolled={isScrolled} />
 
-        <ProgressBar /></>
+        <CookieAccept />
+        <ProgressBar />
+    </>
 }

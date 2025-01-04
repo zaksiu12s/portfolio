@@ -4,6 +4,8 @@ import HorizontalInfoBar from "./components/HorizontalBars/HorizontalInfoBar";
 import HorizontalLinksBar from "./components/HorizontalBars/HorizontalLinksBar";
 import { useTranslation } from "react-i18next";
 import Footer from "./components/Footer/Footer";
+import { Helmet } from "react-helmet";
+import CookieAccept from "./components/Poppups/CookieAccept";
 
 export default function TermsOfService() {
     const { t } = useTranslation();
@@ -32,6 +34,10 @@ export default function TermsOfService() {
     }, []);
 
     return <>
+        <Helmet>
+            <title>{isScrolled ? "zaaksiu." : "zaaksiu"} - {t("Terms of Service")}</title>
+        </Helmet>
+
         <Navbar isScrolled={isScrolled} isMenuVisible={isMenuVisible} handleMenuClick={handleMenuClick} showMenuItems={false} />
         <HorizontalInfoBar isScrolled={isScrolled} />
         <HorizontalLinksBar />
@@ -133,6 +139,7 @@ export default function TermsOfService() {
             </section>
         </div>
 
+        <CookieAccept />
         <Footer />
     </>
 }

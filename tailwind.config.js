@@ -10,6 +10,10 @@ export default {
         Poppins: ["Poppins", "sans-serif"],
         BebasNeue: ["Bebas Neue", "sans-serif"],
       },
+      colors: {
+        accent: "var(--accent-color)",
+        "accent-darker": "var(--accent-color-darker",
+      },
       keyframes: {
         growWidth: {
           "0%": { width: "0" },
@@ -30,6 +34,10 @@ export default {
           "0%": { transform: "translateX(100%)", opacity: "0" },
           "100%": { transform: "translateX(0)", opacity: "1" },
         },
+        slideInFromBottom: {
+          "0%": { transform: "translateY(100%)", opacity: "0" },
+          "100%": { transform: "translateX(0)", opacity: "1" },
+        },
         slideInFromRightYTranslate: {
           "0%": {
             transform: "translateX(100%) translateY(-66%)",
@@ -43,6 +51,8 @@ export default {
         },
       },
       animation: {
+        slideInFromBottom:
+          "slideInFromBottom var(--tw-animate-duration, 1s) var(--tw-animate-easing, ease) var(--tw-animate-delay, 0s) var(--tw-animate-iteration, 1) var(--tw-animate-fill, both)",
         slideInFromLeftYTranslate:
           "slideInFromLeftYTranslate var(--tw-animate-duration, 1s) var(--tw-animate-easing, ease) var(--tw-animate-delay, 0s) var(--tw-animate-iteration, 1) var(--tw-animate-fill, both)",
         slideInFromRightYTranslate:

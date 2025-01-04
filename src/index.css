@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --accent-color: #3b82f6;
+  --accent-color-darker: #2563eb;
+}
+
+.dark {
+  --accent-color: #ea580c;
+  --accent-color-darker: #c2410c;
+}

@@ -12,7 +12,7 @@ export function NavbarButton(props: { text: string; href: string }) {
         }
     };
 
-    return <button type="button" onClick={handleClick} className="hover:rounded-md transition-all hover:scale-105 cursor-pointer h-min max-w-max bg-blue-500 dark:bg-orange-600 px-2 py-1 text-white font-bold">
+    return <button type="button" onClick={handleClick} className="hover:rounded-md transition-all hover:scale-105 cursor-pointer h-min max-w-max bg-accent px-2 py-1 text-white font-bold">
         {props.text}
     </button>;
 }

@@ -4,10 +4,13 @@ import HorizontalInfoBar from "./components/HorizontalBars/HorizontalInfoBar";
 import HorizontalLinksBar from "./components/HorizontalBars/HorizontalLinksBar";
 import { useTranslation } from "react-i18next";
 import Footer from "./components/Footer/Footer";
+import { Helmet } from "react-helmet";
+import CookieAccept from "./components/Poppups/CookieAccept";
 
 export default function PrivacyPolicy() {
     const { t } = useTranslation();
 
+    const [isManageCookiesVisible, setIsManageCookiesVisible] = useState(false);
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
     const [isMenuVisible, setIsMenuVisible] = useState<boolean>(false);
 
@@ -33,6 +36,10 @@ export default function PrivacyPolicy() {
 
     return (
         <>
+            <Helmet>
+                <title>{isScrolled ? "zaaksiu." : "zaaksiu"} - {t("Privacy Policy")}</title>
+            </Helmet>
+
             <Navbar loadMainPage={true} isScrolled={isScrolled} isMenuVisible={isMenuVisible} handleMenuClick={handleMenuClick} showMenuItems={false} />
             <HorizontalInfoBar isScrolled={isScrolled} />
             <HorizontalLinksBar />
@@ -117,8 +124,13 @@ export default function PrivacyPolicy() {
                         {t("If you have any questions or concerns about this Privacy Policy, please contact us through our contact form or via email.")}
                     </p>
                 </section>
+
+                <p className="text-center pb-12 text-neutral-400 underline" onClick={() => { setIsManageCookiesVisible(true) }}>
+                    Manage your cookies.
+                </p>
             </div>
 
+            <CookieAccept show={isManageCookiesVisible} hide={setIsManageCookiesVisible} />
             <Footer />
         </>
     );
