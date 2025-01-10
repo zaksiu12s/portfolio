@@ -18,7 +18,7 @@ export default function Navbar({ isScrolled,
     const { theme, setTheme } = useTheme();
 
     return (
-        <nav className={" animate-fade fixed w-full text-neutral-700 dark:text-white font-Poppins py-4 sm:py-10 px-8 sm:px-16 top-0 left-0 z-40 transition-all " + (isScrolled && " bg-neutral-300 dark:bg-neutral-900 sm:py-4 sm:px-20 ")}>
+        <nav className={" sm:animate-fade fixed w-full text-neutral-700 dark:text-white font-Poppins py-4 sm:py-10 px-8 sm:px-16 top-0 left-0 z-40 transition-all " + (isScrolled && " bg-neutral-300 dark:bg-neutral-900 sm:py-4 sm:px-20 ")}>
             <Container>
                 <div className="flex justify-between items-center gap-10">
                     <NavbarLogo goHome={loadMainPage || !isScrolled} />
