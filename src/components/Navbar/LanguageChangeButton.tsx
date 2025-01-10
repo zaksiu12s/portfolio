@@ -1,5 +1,5 @@
 import { useState } from "react";
-import i18n from "../../18n";
+import i18n from "../../hooks/18n";
 import { handleLanguageChange } from "../../helpers/handleLanguageChange";
 
 export default function LanguageChangeButton() {

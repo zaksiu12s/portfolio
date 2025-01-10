@@ -1,6 +1,6 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import emailjs from 'emailjs-com';
-import i18n from "../../18n";
+import i18n from "../../hooks/18n";
 import Input from "../Input";
 import Label from "../Label";
 import TextArea from "../TextArea";

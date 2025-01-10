@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import Navbar from "./components/Navbar/Navbar";
-import HorizontalInfoBar from "./components/HorizontalBars/HorizontalInfoBar";
-import HorizontalLinksBar from "./components/HorizontalBars/HorizontalLinksBar";
+import Navbar from "../components/Navbar/Navbar";
+import HorizontalInfoBar from "../components/HorizontalBars/HorizontalInfoBar";
+import HorizontalLinksBar from "../components/HorizontalBars/HorizontalLinksBar";
 import { useTranslation } from "react-i18next";
-import Footer from "./components/Footer/Footer";
+import Footer from "../components/Footer/Footer";
 import { Helmet } from "react-helmet";
-import CookieAccept from "./components/Poppups/CookieAccept";
+import CookieAccept from "../components/Poppups/CookieAccept";
 
 export default function PrivacyPolicy() {
     const { t } = useTranslation();

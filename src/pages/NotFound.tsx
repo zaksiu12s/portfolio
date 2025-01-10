@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Navbar from "./components/Navbar/Navbar";
-import HorizontalInfoBar from "./components/HorizontalBars/HorizontalInfoBar";
-import HorizontalLinksBar from "./components/HorizontalBars/HorizontalLinksBar";
-import { HeroSectionCTA } from "./components/UI/HeroSectionCTA";
+import Navbar from "../components/Navbar/Navbar";
+import HorizontalInfoBar from "../components/HorizontalBars/HorizontalInfoBar";
+import HorizontalLinksBar from "../components/HorizontalBars/HorizontalLinksBar";
+import { HeroSectionCTA } from "../components/UI/HeroSectionCTA";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 

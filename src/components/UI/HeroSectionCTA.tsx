@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
-import useOnScreen from "../../Hooks/useOnScreen";
+import useOnScreen from "../../hooks/useOnScreen";
 
 export function HeroSectionCTA({ text = "Get In Touch", href, htmlHref, bgFill = false, onClick }: {
     text?: string;

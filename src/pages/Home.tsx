@@ -1,17 +1,17 @@
-import Navbar from "./components/Navbar/Navbar";
-import HeroSection from "./components/HeroSection/HeroSection";
-import HorizontalLinksBar from "./components/HorizontalBars/HorizontalLinksBar";
-import HorizontalInfoBar from "./components/HorizontalBars/HorizontalInfoBar";
-import AboutMeSection from "./components/AboutMeSection/AboutMeSection";
-import ServicesSection from "./components/ServicesSection/ServicesSection";
-import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
-import ContactSection from "./components/ContactSection/ContactSection";
-import Footer from "./components/Footer/Footer";
-import ProgressBar from "./components/ProgressBar/ProgressBar";
-import ParticleBackground from "./components/Particles/ParticleBackground";
+import Navbar from "../components/Navbar/Navbar";
+import HeroSection from "../components/HeroSection/HeroSection";
+import HorizontalLinksBar from "../components/HorizontalBars/HorizontalLinksBar";
+import HorizontalInfoBar from "../components/HorizontalBars/HorizontalInfoBar";
+import AboutMeSection from "../components/AboutMeSection/AboutMeSection";
+import ServicesSection from "../components/ServicesSection/ServicesSection";
+import ProjectsSection from "../components/ProjectsSection/ProjectsSection";
+import ContactSection from "../components/ContactSection/ContactSection";
+import Footer from "../components/Footer/Footer";
+import ProgressBar from "../components/ProgressBar/ProgressBar";
+import ParticleBackground from "../components/Particles/ParticleBackground";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import CookieAccept from "./components/Poppups/CookieAccept";
+import CookieAccept from "../components/Poppups/CookieAccept";
 
 export default function Home() {
     const [isScrolled, setIsScrolled] = useState<boolean>(false);

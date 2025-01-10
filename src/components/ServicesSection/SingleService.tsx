@@ -1,6 +1,6 @@
 import { ReactNode, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import useOnScreen from "../../Hooks/useOnScreen";
+import useOnScreen from "../../hooks/useOnScreen";
 
 export function SingleService(props: { mainText: string, secondaryText: string, children: ReactNode, align?: "left" | "right" }) {
     const { t } = useTranslation();

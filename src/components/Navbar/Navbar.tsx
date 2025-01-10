@@ -1,5 +1,5 @@
 import Sun from "../../assets/icons/Sun";
-import useTheme from "../../Hooks/useTheme";
+import useTheme from "../../hooks/useTheme";
 import Container from "../Container";
 import LanguageChangeButton from "./LanguageChangeButton";
 import { NavbarButton } from "./NavbarButton";

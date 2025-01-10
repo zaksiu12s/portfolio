@@ -1,10 +1,10 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import Polish from "./translations/Polish";
-import English from "./translations/English";
-import Italian from "./translations/Italian";
-import Russian from "./translations/Russian";
-import Arabic from "./translations/Arabic";
+import Polish from "../translations/Polish";
+import English from "../translations/English";
+import Italian from "../translations/Italian";
+import Russian from "../translations/Russian";
+import Arabic from "../translations/Arabic";
 
 let userLang = navigator.language.split("-")[0];
 

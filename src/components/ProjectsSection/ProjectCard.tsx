@@ -1,6 +1,6 @@
 import { ReactNode, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import useOnScreen from "../../Hooks/useOnScreen";
+import useOnScreen from "../../hooks/useOnScreen";
 
 export function ProjectCard(props: { mainText: string; secondaryText: string; src: string; alt: string; link: string; children?: ReactNode; linkWebsite?: string; }) {
     const { t } = useTranslation();

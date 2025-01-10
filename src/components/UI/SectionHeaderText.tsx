@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import useOnScreen from "../../Hooks/useOnScreen";
+import useOnScreen from "../../hooks/useOnScreen";
 
 export default function SectionHeaderText(props: { mainText: string, secondaryText: string, align?: "left" | "right" }) {
     const ref = useRef<HTMLDivElement>(null);
