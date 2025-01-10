@@ -1,69 +1,67 @@
-import { Analytics } from "analytics";
+const SERVER_URL = "http://localhost:5000/api/v1/websiteInfo";
+let activeTime = 0;
+let lastActiveTimestamp = Date.now();
 
-const URL = "http://localhost:5000/api/v1/websiteInfo";
-
-const pageStartTime = Date.now();
-
-const trackTimeSpent = (analytics) => {
-    const timeSpent = Date.now() - pageStartTime;
-    analytics.track('Page Time Spent', {
-        category: 'Page Interaction',
-        label: window.location.pathname,
-        timeSpent: timeSpent
-    });
-    console.log(`Time spent on ${window.location.pathname}: ${timeSpent} ms`);
-};
-
-const trackPageView = (analytics) => {
-    analytics.page({
-        path: window.location.pathname,
-        title: document.title,
-        url: window.location.href
-    });
-    console.log(`Page view tracked: ${window.location.pathname}`);
-};
-
-async function updateWebsiteTraffic() {
-    try {
-        const response = await fetch(URL);
-
-        if (response.ok === true) {
-            const data = await response.json();
-            console.log("TRAFFIC HANDLER PAYLOAD: " + data.count);
-        } else {
-            console.error("TRAFFIC HANDLER ERROR: trying again to update website traffic data.");
-            setTimeout(() => { updateWebsiteTraffic() }, 1000);
+const sendData = async ({
+    currentPageURL,
+    currentPageTitle,
+    currentPageHeight,
+    currentPageWidth
+}: {
+    currentPageURL: string,
+    currentPageTitle: string,
+    currentPageHeight: number,
+    currentPageWidth: number
+}) => {
+    await fetch(SERVER_URL, {
+        body: JSON.stringify({
+            currentPageURL,
+            currentPageTitle,
+            currentPageHeight,
+            currentPageWidth,
+            timeSpent: activeTime
+        }),
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
         }
-    } catch (error) {
-        console.error("TRAFFIC HANDLER ERROR: " + error + ". Trying again to update website traffic data.");
-        setTimeout(() => { updateWebsiteTraffic() }, 10000);
+    });
+};
+
+const updateActiveTime = () => {
+    if (document.visibilityState === "visible") {
+        activeTime += Date.now() - lastActiveTimestamp;
+        lastActiveTimestamp = Date.now();
     }
-}
+};
+
+const trackVisibility = () => {
+    document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "visible") {
+            lastActiveTimestamp = Date.now();
+        } else {
+            activeTime += Date.now() - lastActiveTimestamp;
+        }
+    });
+};
 
 async function init() {
-    console.log("TRAFFIC HANDLER PAYLOAD: Starting traffic handler.");
+    const currentPageURL = window.location.href;
+    const currentPageTitle = document.title;
+    let currentPageHeight = window.innerWidth;
+    let currentPageWidth = window.innerHeight;
 
-    const analytics = Analytics({
-        app: 'my-app-name',
-        version: "1.4.2",
-        plugins: []
+    window.addEventListener("resize", () => {
+        currentPageHeight = window.innerWidth;
+        currentPageWidth = window.innerHeight;
     });
 
-    trackPageView(analytics);
+    trackVisibility();
 
-    const timeTrackingInterval = setInterval(() => {
-        trackTimeSpent(analytics);
-        console.log("TRAFFIC HANDLER")
-    }, 5000);
 
-    window.addEventListener('beforeunload', () => {
-        clearInterval(timeTrackingInterval);
-        trackTimeSpent(analytics);
-        console.log("Final time spent on page: " + (Date.now() - pageStartTime) + " ms");
-    });
+    updateActiveTime();
+    sendData({ currentPageHeight, currentPageTitle, currentPageWidth, currentPageURL });
 
-    console.log("TRAFFIC HANDLER PAYLOAD: trying to update website traffic data.");
-    updateWebsiteTraffic();
 }
 
 export default init();
